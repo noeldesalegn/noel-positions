@@ -35,4 +35,3 @@
         </section>
     </div>
 </x-layout>
-
