@@ -3,9 +3,12 @@
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl">Let's Find Your Next Job</h1>
 
-            <form class="mt-6">
-                <input type="text" placeholder="web Developer..." class='rounded-xl bg-white/5 border-white/10 px-5 py-4 w-full max-w-xl'>
-            </form>
+{{--            <form class="mt-6">--}}
+{{--                <input type="text" placeholder="web Developer..." class='rounded-xl bg-white/5 border-white/10 px-5 py-4 w-full max-w-xl'>--}}
+{{--            </form>--}}
+            <x-forms.form class="mt-6" action="/search">
+                <x-forms.input :label="false" name="q" placeholder="web Developer..." />
+            </x-forms.form>
         </section>
         <section class="pt-10">
             <x-section-heading> Featured Jobs </x-section-heading>
