@@ -1,6 +1,13 @@
 FROM richarvey/nginx-php-fpm:1.7.2
 
-COPY . .
+# Create the necessary directory structure
+RUN mkdir -p /var/www/html
+
+# Copy the application files to the correct directory
+COPY . /var/www/html
+
+# Set the working directory
+WORKDIR /var/www/html
 
 # Image config
 ENV SKIP_COMPOSER 1
