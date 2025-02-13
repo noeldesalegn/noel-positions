@@ -1,17 +1,17 @@
 FROM richarvey/nginx-php-fpm:1.7.2
 
 # Create the necessary directory structure
-RUN mkdir -p /var/www/html
+RUN mkdir -p /noel-positions
 
 # Copy the application files to the correct directory
-COPY . /var/www/html
+COPY . /noel-positions
 
 # Set the working directory
-WORKDIR /var/www/html
+WORKDIR /noel-positions
 
 # Image config
 ENV SKIP_COMPOSER 1
-ENV WEBROOT /var/www/html/public
+ENV WEBROOT /noel-positions
 ENV PHP_ERRORS_STDERR 1
 ENV RUN_SCRIPTS 1
 ENV REAL_IP_HEADER 1
